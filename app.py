@@ -1,7 +1,6 @@
 import os  # Import os to interact with the operating system
 import streamlit as st  # Import Streamlit for building the web app
 from dotenv import load_dotenv  # Import dotenv to load environment variables
-import validators  # Import validators for URL validation
 from langchain.prompts import PromptTemplate  # Import PromptTemplate to create custom prompts
 from langchain_groq import ChatGroq  # Import ChatGroq for using Groq API with LangChain
 from langchain.chains.summarize import load_summarize_chain  # Import summarize chain for summarization
@@ -29,28 +28,11 @@ st.markdown("""
         font-size: 30px;
         font-weight: bold;
     }
-    .logo {
-        height: 40px;  /* Set logo height */
-        vertical-align: middle;  /* Align logo vertically with text */
-    }
-    .url-input {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
     </style>
 """, unsafe_allow_html=True)
 
 st.markdown('<h1 class="main-title">👽SkyChat: Summarize Text From YT or Website</h1>', unsafe_allow_html=True)
 st.subheader('Summarize the URL')
-
-# Create a URL input field with a YouTube logo
-st.markdown("""
-    <div class="url-input">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" class="logo" alt="YouTube Logo"/>
-        <input type="text" id="url" placeholder="Enter URL (YouTube or website)"/>
-    </div>
-""", unsafe_allow_html=True)
 
 # URL input field
 generic_url = st.text_input("URL", label_visibility="collapsed")
