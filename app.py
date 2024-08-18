@@ -6,6 +6,7 @@ from langchain_groq import ChatGroq  # Import ChatGroq for using Groq API with L
 from langchain.chains.summarize import load_summarize_chain  # Import summarize chain for summarization
 from langchain_community.document_loaders import YoutubeLoader, UnstructuredURLLoader  # Import document loaders
 from langchain_huggingface import HuggingFaceEndpoint  # Import HuggingFaceEndpoint for using HuggingFace models
+import validators 
 
 # Load environment variables from .env file
 load_dotenv()
