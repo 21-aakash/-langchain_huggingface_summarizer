@@ -7,9 +7,9 @@ from langchain_huggingface import HuggingFaceEndpoint
 
 
 ## sstreamlit APP
-st.set_page_config(page_title="LangChain: Summarize Text From YT or Website", page_icon="🦜")
-st.title("🦜 LangChain: Summarize Text From YT or Website")
-st.subheader('Summarize URL')
+st.set_page_config(page_title="SkyChat: Summarize Text From YT or Website", page_icon="👽")
+st.title("👽Skychat: Summarize Text From YT or Website")
+st.subheader('Summarize the URL')
 
 
 
